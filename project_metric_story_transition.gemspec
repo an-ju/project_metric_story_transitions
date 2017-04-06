@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["An Ju"]
   spec.email         = ["an_ju@berkeley.edu"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = 'Metrics for the lifecycle of stories'
+  spec.description   = 'This gem will provide data needed to plot the lifecycle graph of all stories in a project.'
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
 
@@ -33,5 +33,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.14"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
-  spec.add_development_dependency "tracker_api", "~> 0.2.0"
+  spec.add_dependency 'faraday', '~>0.11.0.0'
 end
