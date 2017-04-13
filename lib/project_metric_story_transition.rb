@@ -21,7 +21,15 @@ class ProjectMetricStoryTransition
   end
 
   def refresh
-    @raw_data = stories.map { |s| transitions(s['id']) }
+    @raw_data = {transitions: [], stories: []}
+    stories.each do |s|
+      trans = transitions s['id']
+      unless trans.empty?
+        @raw_data[:transitions] << trans
+        @raw_data[:stories] << s
+      end
+    end
+    @raw_data[:transitions].flatten
   end
 
   def raw_data=(new)
