@@ -29,7 +29,7 @@ class ProjectMetricStoryTransition
         @raw_data[:stories] << s
       end
     end
-    @raw_data[:transitions].flatten
+    @raw_data[:transitions] = @raw_data[:transitions].flatten
   end
 
   def raw_data=(new)
